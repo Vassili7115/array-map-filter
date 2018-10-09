@@ -41,10 +41,14 @@ En sortie: [
 ]
 
  */
-
-function getFoodCategories(foods) {
+const getFoodCategories = (foods) => {
+    return foods.map ((item) => {
+        if (item.isVegetarian)
+            return `${item.food} is suitable for vegetarians`;
+        else
+            return `${item.food} is not suitable for vegetarians`;
+    });
 }
-
 
 
 // Ne pas modifier l'export
